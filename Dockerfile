@@ -23,5 +23,5 @@ RUN cd server && \
 
 RUN apt-get remove build-essential g++ libboost-all-dev libtag1-dev zlib1g-dev && \
 	apt-get autoremove -y && \
-	apt-get clean && \
+	apt-get clean -y && \
 	rm -rf /var/lib/apt/*
