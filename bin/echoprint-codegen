@@ -1,0 +1,8 @@
+#!/bin/bash
+
+file=$1
+ABSOLUTE_PATH="$(cd "$(dirname "${file}")" && pwd)/$(basename "${file}")"
+
+test -e $file || exit -1
+
+docker run -ti --rm -v ${ABSOLUTE_PATH}:/my_sound ebuildy/echoprint echoprint-codegen /my_sound
