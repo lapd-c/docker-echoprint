@@ -4,7 +4,9 @@ RUN apt-get update
 
 RUN apt-get install -y build-essential python python-pip git wget curl nano make g++
 
-RUN apt-get install -y libboost-all-dev libtag1-dev zlib1g-dev  
+RUN apt-get install -y libboost-all-dev libtag1-dev zlib1g-dev
+
+RUN apt-get install -y ffmpeg
 
 RUN mkdir /opt/echoprint && \
 	cd /opt/echoprint && \
