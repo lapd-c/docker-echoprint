@@ -23,7 +23,7 @@ RUN cd server && \
 	python setup.py install && \
 	pip install nose flake8 flask tornado
 
-RUN apt-get remove -y build-essential g++ libboost-all-dev libtag1-dev zlib1g-dev python-pip && \
+RUN apt-get remove -y build-essential g++ python-pip && \
 	apt-get autoremove -y && \
 	apt-get clean -y && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
